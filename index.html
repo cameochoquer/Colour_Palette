@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="palette.css">
 </head>
-<body>
+<body onload="myFunction()">
     <header>COLOUR PALETTE PICKER</header>
     <div class="container">
         <div class="colour" id="p1">
-            <input type="color" class="colour">
+            <input type="color" id="colourPicker" value="#ffffff">
+            <p id="p1Text"></p>
         </div>
         <div class="colour" id="p2"></div>
         <div class="colour" id="p3"></div>
@@ -16,6 +17,7 @@
         <div class="colour" id="p5"></div>
     </div>  
 </body>
+
 
 <script src="script.js"></script>
 
