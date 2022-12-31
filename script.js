@@ -1,12 +1,8 @@
-let y = document.querySelectorAll("div.colour")
-let x = document.getElementById("colourPicker");
+let paletteBackground = document.querySelectorAll("div.colour")
+let colourPicker = document.querySelectorAll("#colourPicker");
+let text = document.querySelectorAll("p.hexText")
 
-let picker = [...x];
-let palette = [...y];
-console.log(picker);
+let picker = [...colourPicker];
+let palette = [...paletteBackground];
+let texts = [...text];
 
-setInterval(()=>{
-    let colour = picker.value;
-    document.getElementById("p1Text").innerHTML = colour;
-    document.getElementById("p1").style.backgroundColor = colour;
-  },200);
