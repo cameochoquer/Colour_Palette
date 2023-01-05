@@ -1,4 +1,4 @@
-let paletteBackground = document.querySelectorAll("div.colour")
+let paletteBackground = document.querySelectorAll("div.colour");
 let colourPicker = document.querySelectorAll("#colourPicker");
 let text = document.querySelectorAll("p.hexText")
 
@@ -13,7 +13,13 @@ function randomColours(){
     });
 };
 
-palette.forEach(randomColours(){
-    
-};
+const input = document.querySelector('input');
+const log = document.getElementById('log');
 
+input.addEventListener('change', updateValue);
+
+function updateValue(e) {
+  log.textContent = e.target.value;
+}
+
+console.log(palette)
