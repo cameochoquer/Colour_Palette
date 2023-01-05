@@ -1,25 +1,31 @@
-let paletteBackground = document.querySelectorAll("div.colour");
-let colourPicker = document.querySelectorAll("#colourPicker");
-let text = document.querySelectorAll("p.hexText")
+// let paletteBackground = document.querySelectorAll("div.colour");
+// let text = document.querySelectorAll("p.hexText")
 
-let picker = [...colourPicker];
-let palette = [...paletteBackground];
-let texts = [...text];
+// let palette = [...paletteBackground];
+// let texts = [...text];
 
-function randomColours(){
+let button = document.getElementById("#generateColour")
+
+ // get the color picker elements
+ let colourPickers = document.querySelectorAll("#colourPicker");
+ let picker = [...colourPickers];
+
+ function randomColours(){
     picker.forEach((index) => {
         let hexCode = '#' + Math.random().toString(16).substring(2, 8);
         index.value = hexCode;
     });
 };
 
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+ // set the background color of the div element when the corresponding color picker value changes
 
-input.addEventListener('change', updateValue);
+ colourPickers.forEach(function hello(colourPicker) {
+   colourPicker.addEventListener('change', function() {
+     var color = this.value;
+     var colorBox = this.parentNode;
+     colorBox.style.backgroundColor = color;
+   });
+ });
 
-function updateValue(e) {
-  log.textContent = e.target.value;
-}
 
-console.log(palette)
+

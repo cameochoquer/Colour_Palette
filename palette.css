@@ -9,7 +9,6 @@ header{
 .colour{
     display: flex;
     flex-flow: row wrap;
-    background-color: #ffff;
     border-color: blue;
     border-radius: 5px;
     border-style: solid;
