@@ -16,7 +16,9 @@
         //make the value of each colourpicker equal to a random hexcode
         element.value = hexCode;
         const bigBox = document.getElementById(`p${index + 1}`);
+        const hexText = document.getElementById(`p${index + 1}Text`);
         bigBox.style.background = hexCode;
+        hexText.innerHTML = hexCode
     });
 //function to match colour picker to div
     colourPickers.forEach(function (colourPicker) {
@@ -24,10 +26,9 @@
           var color = this.value;
           var colorBox = this.parentNode;
           colorBox.style.backgroundColor = color;
-
         });
       });
+
+      
 };
-
-
 
