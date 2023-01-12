@@ -23,12 +23,21 @@
 //function to match colour picker to div
     colourPickers.forEach(function (colourPicker) {
         colourPicker.addEventListener('input', function() {
-          var color = this.value;
-          var colorBox = this.parentNode;
-          colorBox.style.backgroundColor = color;
+          var color = colourPicker.value;
+          var colorBox = colourPicker.parentNode;
+          colorBox.style.backgroundColor = color;         
         });
       });
-
-      
 };
 
+// colourPickers.forEach(function (colourPicker) {
+//     colourPicker.addEventListener('input', function() {
+//         var color = colourPicker.value;
+//         var colorBox = colourPicker.parentNode;
+//         colorBox.style.backgroundColor = color;
+//         const colorBoxes = document.getElementsByClassName("colour");
+//         const p = document.createElement('p');
+//         p.innerHTML = color;
+//         colorBoxes.forEach(colorBox => colorBox.appendChild(p));
+//     });
+// });
