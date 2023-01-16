@@ -21,13 +21,18 @@
         hexText.innerHTML = hexCode
     });
 //function to match colour picker to div
-    colourPickers.forEach(function (colourPicker) {
+    colourPickers.forEach(function (colourPicker, index) {
         colourPicker.addEventListener('input', function() {
           var color = colourPicker.value;
           var colorBox = colourPicker.parentNode;
-          colorBox.style.backgroundColor = color;         
+          colorBox.style.backgroundColor = color; 
+          const hexText = document.getElementById(`p${index + 1}Text`);
+          hexText.innerHTML = color;
+          console.log(color)       
         });
+       
       });
+     
 };
 
 // colourPickers.forEach(function (colourPicker) {
